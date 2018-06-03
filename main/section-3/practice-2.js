@@ -1,5 +1,13 @@
 'use strict';
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  for(var e of objectB.value){
+    for(var obj of collectionA){
+      if(e === obj.key){
+        let count = Math.floor(obj.count / 3);
+        obj.count -= count;
+      }
+    }
+  }
+  return collectionA;
 }
