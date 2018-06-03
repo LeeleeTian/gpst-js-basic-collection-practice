@@ -1,5 +1,22 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
-  return '实现练习要求，并改写该行代码。';
+  let statistic = new Array();
+  for(var element of collection){
+      let [flag, count] = [1, 1];
+      element = element.split('-');
+      (element.length !== 1)? count = parseInt(element[1]): null;
+      element = element[0];
+      if(statistic.length !== 0){
+          for(var obj of statistic){
+              if(obj.key === element){
+                  obj.count += count;
+                  flag = 0;
+                  break;
+              }
+          }
+      }
+      (flag)? statistic.push({key: element, count: count}) : null;
+  }
+  return statistic;
 }
