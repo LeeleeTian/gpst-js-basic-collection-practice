@@ -1,5 +1,12 @@
 'use strict';
 
 module.exports = function collectSameElements(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  let intersection = new Array();
+  for(let i = 0; i < collectionA.length; i++){
+    for(let j = 0; j < objectB.value.length; j++){
+      if(collectionA[i].key === objectB.value[j])
+        intersection.push(collectionA[i].key);
+    }
+  }
+  return intersection;
 }
