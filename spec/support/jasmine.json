@@ -1,7 +1,7 @@
 {
   "spec_dir": "spec",
   "spec_files": [
-    "section-3/practice-2-spec.js"
+    "section-3/practice-3-spec.js"
   ],
   "helpers": [
     "helpers/**/*.js"
